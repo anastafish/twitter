@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import '../styles/main.css'
 
 export default function Main(props){
@@ -25,8 +26,9 @@ export default function Main(props){
                         <img src="../../images/location.svg" alt="" />
                     </div>
                     <button>Tweet</button>
+                    <button>Sign Out</button>
                 </div>
-            </div>
+            </div>                
         </div>
     )
 }
