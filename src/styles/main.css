@@ -1,0 +1,108 @@
+.main-container{
+    display: grid;
+    grid-template-rows: .4fr 1fr auto;
+    align-items: flex-start;
+    width: 100%;
+    border:1px solid rgba(203, 203, 233, 0.322);
+    padding: .7rem;
+    border-bottom: none;
+}
+
+.main-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    border-bottom: 1px solid rgba(203, 203, 233, 0.322);
+}
+
+.main-top h2{
+    align-self: flex-start;
+}
+
+.main-top-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.main-top-bottom h3{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.main-top-bottom h3:hover{
+    background-color: rgba(224, 222, 222, 0.801);
+    opacity: .4;
+}
+
+.main-middle{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(203, 203, 233, 0.322);
+}
+
+.main-middle-top{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.main-middle-top img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+}
+
+.main-middle-bottom img{
+width: 1.3rem;
+cursor: pointer;
+}
+
+.main-middle-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 4.5rem;
+}
+
+.main-middle-bottom button{
+    border: none;
+    padding: .9rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: rgb(29, 155, 240);
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.main-middle-bottom button:hover{
+    background-color: rgb(34, 125, 185);
+
+}
+
+textarea{
+    outline: none;
+    font-size: 1.3rem;
+    appearance: none;
+    resize: none;
+    width: 100%;
+    height: 5rem;
+    border: none;
+}
+
+
+.main-middle-bottom > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .7rem;
+}
