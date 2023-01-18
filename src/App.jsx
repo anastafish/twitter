@@ -6,12 +6,12 @@ import RightSideBar from './componenets/right-sidebar'
 
 
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <SideBar/>
-      <Main/>
-      <RightSideBar/>      
+      <SideBar className="sidebar" app={props.app} getAuth={props.getAuth}/>
+      <Main db={props.db} app={props.app} getAuth={props.getAuth}/>
+      <RightSideBar app={props.app} getAuth={props.getAuth}/>      
     </div>
   )
 }

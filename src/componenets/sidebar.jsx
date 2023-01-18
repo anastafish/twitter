@@ -1,13 +1,27 @@
 import '../styles/sidebar.css'
+import { getAuth, signOut } from "firebase/auth";
+
 
 export default function SideBar(props){
+    const auth = getAuth(props.app);
+
+        function signOutHandler(){
+        signOut(auth).then(() => {
+        console.log('Sign-out successful.')
+        window.open('/login', '_self')
+        }).catch((error) => {
+        console.log('error')
+        });
+        }
 
     function Item(props){
         return(
-            <div className="item-container">
-                <img src={`../../images/${props.img}`} alt="" />
-                <h3>{props.title}</h3>
-            </div>
+            <a href={props.link}>
+                <div className="item-container">
+                    <img src={`../../images/${props.img}`} alt="" />
+                    <h3>{props.title}</h3>
+                </div>
+            </a>
         )
     }
 
@@ -15,8 +29,8 @@ export default function SideBar(props){
         <div className="sidebar-container">
             <img className='twitter-logo' src="../../images/twitterLogo.png" alt="" />
             <div className="items">
-                <Item title={"Home"} img={"home.svg"}/>
-                <Item title={"Explore"} img={"hash.svg"}/>
+                <Item link={'/home'} title={"Home"} img={"home.svg"}/>
+                <Item link={'/explore'} title={"Explore"} img={"hash.svg"}/>
                 <Item title={"Notifications"} img={"noti.svg"}/>
                 <Item title={"Messages"} img={"msg.svg"}/>
                 <Item title={"Bookmarks"} img={"book.svg"}/>
@@ -25,6 +39,8 @@ export default function SideBar(props){
                 <Item title={"More"} img={"dots.svg"}/>
             </div>
             <button className='tweet-btn'>Tweet</button>
+            <button className='signout-btn' onClick={signOutHandler}>Sign Out</button>
+
         </div>
     )
 }

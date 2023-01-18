@@ -6,6 +6,7 @@ import { getAuth, createUserWithEmailAndPassword,signInWithPopup, GoogleAuthProv
 
 export default function SignUp(props){
     const provider = new GoogleAuthProvider();
+    const auth = getAuth(props.app);
 
     function googleSign(){
             signInWithPopup(auth, provider)
@@ -58,8 +59,6 @@ export default function SignUp(props){
         email:"",
         password:""
        })  
-       const auth = props.getAuth();
-
     return( 
         <div className="signup-container">
             <img src="../../images/twitterLogo.png" alt="" />

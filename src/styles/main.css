@@ -1,6 +1,6 @@
 .main-container{
     display: grid;
-    grid-template-rows: .4fr 1fr auto;
+    grid-template-rows: .4fr .8fr 4fr;
     align-items: flex-start;
     width: 100%;
     border:1px solid rgba(203, 203, 233, 0.322);
@@ -48,6 +48,7 @@
     justify-content: center;
     gap: 1rem;
     border-bottom: 1px solid rgba(203, 203, 233, 0.322);
+    height: fit-content;
 }
 
 .main-middle-top{
@@ -90,6 +91,7 @@ cursor: pointer;
 }
 
 textarea{
+    padding-top: 1.2rem;
     outline: none;
     font-size: 1.3rem;
     appearance: none;

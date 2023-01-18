@@ -1,0 +1,95 @@
+.post-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    border-bottom:1px solid rgba(203, 203, 233, 0.322);
+    padding: 1rem;
+}
+
+.post-top > img{
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 100%;
+    margin: .7rem;
+}
+
+.post-name{
+    display: flex;
+    height: fit-content;
+    gap: .5rem;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-name h4, h6{
+    padding: 0;
+    margin: 0;
+}
+
+.post-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.post-info p{
+    text-align: left;
+}
+
+.post-icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.post-icons div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    border-radius: 100%;
+    cursor: pointer;
+    padding: .5rem;
+}
+
+.post-icons img{
+    width: 1rem;
+    height: 1rem;
+}
+
+.post-top{
+    display: flex;
+}
+
+.comment:hover{
+    background-color: rgb(46, 172, 204);
+    opacity: .4;
+}
+
+.retweet:hover{
+    background-color: rgb(46, 204, 112);
+    opacity: .6;
+}
+
+.heart:hover{
+    background-color: rgb(158, 54, 54);
+    opacity: .7;
+}
+
+.chart:hover{
+    background-color: rgb(46, 172, 204);
+    opacity: .4;
+}
+
+.upload:hover{
+    background-color: rgb(46, 172, 204);
+    opacity: .4;
+}
+
+.upload{
+    padding: 1.5rem;
+}

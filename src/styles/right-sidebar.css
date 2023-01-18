@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
-    height: 100%;
+    height: fit-content;
     width: 70%;
     margin-left: 2rem;
 }
@@ -37,15 +37,31 @@
 
 .trend{
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     background-color: rgba(207, 192, 192, 0.116);
-    padding: 1rem;
+    padding: 1.5rem;
+    padding-top: .3rem;
     border-radius: 1rem;
     height: 100%;
     width: 100%;
+    gap: 1rem;
 }
 
 .trend h1{
     font-size: 1.2rem;
+}
+
+.trenditem-container{
+    display: grid;
+    height:fit-content;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items:start;
+}
+
+.trenditem-container h5, h4{
+    padding: 0;
+    margin: .55rem;
+    height: 0px;
 }

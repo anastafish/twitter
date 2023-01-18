@@ -1,11 +1,23 @@
 import { useState } from "react"
 import '../styles/login.css'
-import { getAuth, createUserWithEmailAndPassword,signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
 
 
 export default function Login(props){
-    const auth = props.getAuth();
+    const auth = getAuth(props.app);
     const provider = new GoogleAuthProvider();
+
+
+    onAuthStateChanged(auth, (user) => {
+    if (user) {
+        const uid = user.uid;
+        console.log(uid)
+        window.open('/home', '_self')
+    } else {
+        // User is signed out
+        // ...
+    }
+    });
 
     function googleLogin(){
         signInWithPopup(auth, provider)
@@ -15,7 +27,6 @@ export default function Login(props){
           const token = credential.accessToken;
           // The signed-in user info.
           console.log('signed in successfully')
-          window.open('/home', '_self')
           const user = result.user;
           // ...
         }).catch((error) => {
@@ -49,9 +60,7 @@ export default function Login(props){
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
-            console.log('signed in successfully')
-            window.open('/home', '_self')
-            // ...
+
         })
         .catch((error) => {            
             const errorCode = error.code;

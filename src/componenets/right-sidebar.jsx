@@ -1,4 +1,5 @@
 import '../styles/right-sidebar.css'
+import TrendItem from './trend'
 
 export default function RightSideBar(props){
     return(
@@ -9,6 +10,12 @@ export default function RightSideBar(props){
             </div>
             <div className="trend">
                 <h1>What's happining</h1>
+                <TrendItem title={'Hogwarts Legacy'} tweets={'22.5k'}/>
+                <TrendItem title={'Hogwarts Legacy'} tweets={'22.5k'}/>
+                <TrendItem title={'Hogwarts Legacy'} tweets={'22.5k'}/>
+                <TrendItem title={'Hogwarts Legacy'} tweets={'22.5k'}/>
+
+
             </div>
         </div>
     )
