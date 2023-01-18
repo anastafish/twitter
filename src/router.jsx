@@ -37,11 +37,11 @@ export default function Router(){
 
      
     return(
-        <BrowserRouter>
+        <BrowserRouter >
         <Routes>
-          <Route path={'/'} element={<SignUp app={app} getAuth={getAuth} />}></Route>
+          <Route path={'/signup'} element={<SignUp app={app} getAuth={getAuth} />}></Route>
           <Route path='/login' element={<Login app={app} getAuth={getAuth}/>}></Route>
-          <Route path={'/home'} element={<App db={db} app={app} getAuth={getAuth}/>}></Route>
+          <Route path={'/'} element={<App db={db} app={app} getAuth={getAuth}/>}></Route>
           <Route path={'/explore'} element={<Explore/>}></Route>
         </Routes>
       </BrowserRouter>

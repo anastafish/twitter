@@ -1,11 +1,13 @@
 {
   "name": "twitter",
-  "private": true,
+  "homepage": "https://anastafish.github.io/twitter/",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://anastafish.github.io/twitter/",
 
   "scripts": {
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"

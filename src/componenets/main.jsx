@@ -6,6 +6,8 @@ import { getAuth} from "firebase/auth";
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import InfiniteScroll from 'react-infinite-scroller';
+import { nanoid } from 'nanoid'
+
 
 
 
@@ -40,7 +42,7 @@ export default function Main(props){
        }
 
     function tweet(){
-        setDoc(doc(db, "posts", 'post10'),newPost)
+        setDoc(doc(db, "posts", nanoid()),newPost)
     }   
 
     const fetchPosts = async() =>{
