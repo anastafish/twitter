@@ -31,6 +31,7 @@ export default function Main(props){
     })   
 
     function handleChange(event){
+        if (user){
         const {value, name}  = event.target
         setNewPost(prevValue => ({
             ...prevValue,
@@ -39,7 +40,7 @@ export default function Main(props){
             name:user.providerData[0].displayName ? user.providerData[0].displayName : 'user123',
             userName:`@${user.providerData[0].displayName ? user.providerData[0].displayName : 'user123'}`,
         }))
-       }
+       }}
 
     function tweet(){
         setDoc(doc(db, "posts", nanoid()),newPost)
