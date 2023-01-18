@@ -17,7 +17,7 @@ export default function SignUp(props){
               // The signed-in user info.
               const user = result.user;
               console.log('signed in successfully')
-              window.open('/home', '_self')
+              window.open('/', '_self')
               // ...
             }).catch((error) => {
               // Handle Errors here.
@@ -38,7 +38,7 @@ export default function SignUp(props){
             // Signed in 
             const user = userCredential.user;
             console.log('signed in successfully')
-            window.open('/home', '_self')
+            window.open('/', '_self')
             // ...
           })
           .catch((error) => {

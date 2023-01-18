@@ -12,7 +12,7 @@ export default function Login(props){
     if (user) {
         const uid = user.uid;
         console.log(uid)
-        window.open('/home', '_self')
+        window.open('/', '_self')
     } else {
         // User is signed out
         // ...

@@ -29,7 +29,7 @@ export default function SideBar(props){
         <div className="sidebar-container">
             <img className='twitter-logo' src="../../images/twitterLogo.png" alt="" />
             <div className="items">
-                <Item link={'/home'} title={"Home"} img={"home.svg"}/>
+                <Item link={'/'} title={"Home"} img={"home.svg"}/>
                 <Item link={'/explore'} title={"Explore"} img={"hash.svg"}/>
                 <Item title={"Notifications"} img={"noti.svg"}/>
                 <Item title={"Messages"} img={"msg.svg"}/>

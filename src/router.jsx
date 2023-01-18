@@ -10,6 +10,7 @@ import { getFirestore } from "firebase/firestore";
 import { collection, addDoc, getDocs, doc, setDoc} from "firebase/firestore"; 
 
 
+
 export default function Router(){
     const firebaseConfig = {
         apiKey: "AIzaSyDfYldWxHvI4xc3P3y6cV_2lWGDzHdAke0",
@@ -23,18 +24,6 @@ export default function Router(){
       const app = initializeApp(firebaseConfig);
       const auth = getAuth(app);
       const db = getFirestore(app)
-
-    // setDoc(doc(db, "posts", "post6"), {
-    //     img:'' ,
-    //     name:'',
-    //     userName:'',
-    //   tweet:"",
-    //   comments:'',
-    //   retweet:'',
-    //  heart:'',
-    //   chart:'',
-    // });
-
      
     return(
         <BrowserRouter >
